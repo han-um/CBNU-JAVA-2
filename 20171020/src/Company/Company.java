@@ -40,6 +40,7 @@ public class Company {
 			position = (position.equals("2"))? "대리" :"과장";
 			mng = new Manager(empNo, name, part, position);
 			result += mng.resultStr() + mng.addStr(); //
+			//
 		}
 			
 		System.out.println(result);	

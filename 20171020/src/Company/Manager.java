@@ -11,7 +11,7 @@ public class Manager extends Employee {
 	
 	public String addStr() {
 		String result = "";
-		result += "직책: " + position + "\n";
+		result += "직책: " + position + "\n";//
 		return result;
 	}
 	
