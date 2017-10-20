@@ -19,7 +19,7 @@ public class Employee {
 		return name;
 	};
 	public String getPart() {
-		return part;//
+		return part;
 	}
 	
 	public void setEmpNo(String empNo) {
