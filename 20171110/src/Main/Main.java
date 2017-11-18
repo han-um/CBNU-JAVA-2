@@ -1,12 +1,12 @@
 package Main;
 
 import java.awt.*;
-
+//11
 class FrameTest extends Frame
 {
 	public FrameTest()
 	{
-		super("µÎ ¹øÂ° ÇÁ·¹ÀÓÀÔ´Ï´Ù");
+		super("ë‘ ë²ˆì§¸ í”„ë ˆì„ì…ë‹ˆë‹¤");
 		setBounds(100,100, 300,300);
 		setVisible(true);		
 	}
@@ -30,8 +30,8 @@ class ModelessDialog extends Frame
 	static final long serialVersionUID = 1;
 	public ModelessDialog()
 	{
-		super("´ÙÀÌ¾ó·Î±× Å×½ºÆ®");
-		Dialog d = new Dialog(this, "¸ğ´ú¸®½º ´ÙÀÌ¾ó·Î±×");
+		super("ë‹¤ì´ì–¼ë¡œê·¸ í…ŒìŠ¤íŠ¸");
+		Dialog d = new Dialog(this, "ëª¨ëœë¦¬ìŠ¤ ë‹¤ì´ì–¼ë¡œê·¸");
 		setBounds(0, 0, 400, 400);
 		setVisible(true);
 		d.setSize(200, 200);
@@ -46,9 +46,9 @@ class Button1 extends Frame
 	{
 		super(str);
 		Panel p = new Panel();
-		btn1 = new Button("°¡À§");
-		btn2 = new Button("¹ÙÀ§");
-		btn3 = new Button(" º¸ ");
+		btn1 = new Button("ê°€ìœ„");
+		btn2 = new Button("ë°”ìœ„");
+		btn3 = new Button(" ë³´ ");
 		p.add(btn1); p.add(btn2); p.add(btn3);
 		add(p);
 		btn3.setEnabled(false);
@@ -61,17 +61,17 @@ class Checkbox1 extends Frame {
 	public Checkbox1(String str){
 		super(str);
 		Panel p = new Panel();
-		Checkbox cbx1=new Checkbox("ÀÌ´ë",true);
-		Checkbox cbx2=new Checkbox("°­³²");	
-		Checkbox cbx3=new Checkbox("Á¾·Î");
+		Checkbox cbx1=new Checkbox("ì´ëŒ€",true);
+		Checkbox cbx2=new Checkbox("ê°•ë‚¨");	
+		Checkbox cbx3=new Checkbox("ì¢…ë¡œ");
 		p.add(cbx1);
 		p.add(cbx2);
 		p.add(cbx3);
 		
 		CheckboxGroup group = new CheckboxGroup();
-		Checkbox cbx4=new Checkbox("ÀÌ´ë",group,true);
-		Checkbox cbx5=new Checkbox("°­³²",group,false);	
-		Checkbox cbx6=new Checkbox("Á¾·Î",group,false);
+		Checkbox cbx4=new Checkbox("ì´ëŒ€",group,true);
+		Checkbox cbx5=new Checkbox("ê°•ë‚¨",group,false);	
+		Checkbox cbx6=new Checkbox("ì¢…ë¡œ",group,false);
 		p.add(cbx4);
 		p.add(cbx5);
 		p.add(cbx6);
@@ -89,9 +89,9 @@ class ChoiceTest extends Frame
 	{
 		super(str);
 		ch= new Choice();
-		ch.addItem("ÀÌ´ë");
-		ch.addItem("°­³²");
-		ch.addItem("Á¾·Î");
+		ch.addItem("ì´ëŒ€");
+		ch.addItem("ê°•ë‚¨");
+		ch.addItem("ì¢…ë¡œ");
 		add(ch);
 		setSize(300,100);
 		setVisible(true);
@@ -104,9 +104,9 @@ class LabelTest extends Frame {
 	public LabelTest(String str) {
 		super(str);
 		p=new Panel();
-		label1=new Label("ÀÌ´ë");
-		label2=new Label("°­³²", Label.CENTER);
-		label3=new Label("Á¾·Î", Label.LEFT);
+		label1=new Label("ì´ëŒ€");
+		label2=new Label("ê°•ë‚¨", Label.CENTER);
+		label3=new Label("ì¢…ë¡œ", Label.LEFT);
 		label1.setBackground(Color.red);
 		label2.setBackground(Color.blue);
 		label3.setBackground(Color.green);
@@ -145,11 +145,11 @@ class FlickeringLabel extends Label implements Runnable{
 
 class FlickeringLabelEx extends Frame {
 	public FlickeringLabelEx() {
-		setTitle("FlickeringLabelEx ¿¹Á¦");
+		setTitle("FlickeringLabelEx ì˜ˆì œ");
 		
-		FlickeringLabel fLabel = new FlickeringLabel("±ôºı");
-		Label label = new Label("¾È±ôºı");
-		FlickeringLabel fLabel2 = new FlickeringLabel("¿©±âµµ±ôºı");
+		FlickeringLabel fLabel = new FlickeringLabel("ê¹œë¹¡");
+		Label label = new Label("ì•ˆê¹œë¹¡");
+		FlickeringLabel fLabel2 = new FlickeringLabel("ì—¬ê¸°ë„ê¹œë¹¡");
 		Panel p = new Panel();
 		p.add(fLabel);
 		p.add(label);
@@ -165,30 +165,30 @@ class MenuTest1 extends Frame	{
 		super(str);
 		MenuBar mb = new MenuBar();
 		
-		Menu file = new Menu("ÆÄÀÏ");
-		MenuItem file_new = new MenuItem("»õ·Î ¸¸µé±â");
-		MenuItem file_open = new MenuItem("¿­±â");
-		MenuItem file_save = new MenuItem("ÀúÀå");
-		MenuItem file_newname = new MenuItem("ÀúÀå");
+		Menu file = new Menu("íŒŒì¼");
+		MenuItem file_new = new MenuItem("ìƒˆë¡œ ë§Œë“¤ê¸°");
+		MenuItem file_open = new MenuItem("ì—´ê¸°");
+		MenuItem file_save = new MenuItem("ì €ì¥");
+		MenuItem file_newname = new MenuItem("ì €ì¥");
 	
 		file.add(file_new);
 		file.add(file_open);
 		file.add(file_save);
 		file.add(file_newname);
 	
-		Menu edit = new Menu("ÆíÁı");
-		MenuItem edit_undo = new MenuItem("½ÇÇàÃë¼Ò");
-		MenuItem edit_cut = new MenuItem("Àß¶ó³»±â");
-		MenuItem edit_copy = new MenuItem("º¹»ç");
-		MenuItem edit_paste = new MenuItem("ºÙ¿©³Ö±â");
+		Menu edit = new Menu("í¸ì§‘");
+		MenuItem edit_undo = new MenuItem("ì‹¤í–‰ì·¨ì†Œ");
+		MenuItem edit_cut = new MenuItem("ì˜ë¼ë‚´ê¸°");
+		MenuItem edit_copy = new MenuItem("ë³µì‚¬");
+		MenuItem edit_paste = new MenuItem("ë¶™ì—¬ë„£ê¸°");
 		
 		edit.add(edit_undo);
 		edit.add(edit_cut);
 		edit.add(edit_copy);
 		edit.add(edit_paste);
 	
-		Menu view = new Menu("º¸±â");
-		CheckboxMenuItem view_status = new CheckboxMenuItem("»óÅÂÇ¥½ÃÁÙ");
+		Menu view = new Menu("ë³´ê¸°");
+		CheckboxMenuItem view_status = new CheckboxMenuItem("ìƒíƒœí‘œì‹œì¤„");
 	
 		view.add(view_status);
 	
@@ -208,11 +208,11 @@ class BorderLayoutTest1 extends Frame
 	{
 		super(str);
 		setLayout(new BorderLayout());
-		add("North", new Button("ºÏÂÊ"));
-		add("West", new Button("¼­ÂÊ"));
-		add("East", new Button("µ¿ÂÊ"));
-		add("Center", new Button("Áß¾Ó"));
-		add("South", new Button("³²ÂÊ"));
+		add("North", new Button("ë¶ìª½"));
+		add("West", new Button("ì„œìª½"));
+		add("East", new Button("ë™ìª½"));
+		add("Center", new Button("ì¤‘ì•™"));
+		add("South", new Button("ë‚¨ìª½"));
 
 		setSize(200,200);
 		setVisible(true);
@@ -228,7 +228,7 @@ class GridLayoutTest extends Frame
 		setLayout(new GridLayout(3, 2));
 		for(int i =0; i< 6; i++)
 		{
-			btn[i] = new Button(i+1 + "¹ø ¹öÆ°");
+			btn[i] = new Button(i+1 + "ë²ˆ ë²„íŠ¼");
 			add(btn[i]);
 		}
 		setSize(200, 200);
@@ -241,15 +241,15 @@ public class Main
 	public static void main(String args[])
 	{
 		//FrameTest Obj =new FrameTest();	
-		//new PanelTest("ÆĞ³Î Å×½ºÆ®");
+		//new PanelTest("íŒ¨ë„ í…ŒìŠ¤íŠ¸");
 		//new ModelessDialog();
-		//new Button1("¹öÆ° ¸¸µé±â");
-		//new Checkbox1("Ã¼Å© ¹Ú½º Å×½ºÆ®");
-		//new ChoiceTest("ÄŞº¸ ¹Ú½º ¿¬½À");
-		//new LabelTest("·¹ÀÌºí Å×½ºÆ®");
+		//new Button1("ë²„íŠ¼ ë§Œë“¤ê¸°");
+		//new Checkbox1("ì²´í¬ ë°•ìŠ¤ í…ŒìŠ¤íŠ¸");
+		//new ChoiceTest("ì½¤ë³´ ë°•ìŠ¤ ì—°ìŠµ");
+		//new LabelTest("ë ˆì´ë¸” í…ŒìŠ¤íŠ¸");
 		//new FlickeringLabelEx();
-		//new MenuTest1("¸Ş´º Å×½ºÆ® 1");
-		//new BorderLayoutTest1("BorderLayout ¿¹Á¦");
+		//new MenuTest1("ë©”ë‰´ í…ŒìŠ¤íŠ¸ 1");
+		//new BorderLayoutTest1("BorderLayout ì˜ˆì œ");
 		new GridLayoutTest("Gridlayout Test");
 	}
 }
